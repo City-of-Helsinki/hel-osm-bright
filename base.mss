@@ -185,6 +185,36 @@
   }
 }
 
+/* ---- MAN MADE ---- */
+// Only piers shown. Tagging of other man_made objects inconsistent.
+#man_made[zoom>=15][type = 'pier'] {
+  polygon-fill:@landuse_basic;
+  [zoom=15] {
+    line-width:0;
+    polygon-opacity: @fade_in_opacity_2;
+  }
+  [zoom=16] {
+    line-color:@standard_line;
+    line-width:@standard_line_width;
+    polygon-opacity: @fade_in_opacity_3;
+    line-opacity: 1;
+  }
+  [zoom=17] {
+    line-color:@standard_line;
+    line-width:@standard_line_width;
+    polygon-opacity: 1;
+  }
+}
+// Use light pseudo-3D also for piers
+#man_made[zoom>=18][type = 'pier'] {
+  building-fill:lighten( @landuse_basic, 3% );
+  building-height:1; // Insufficient data for '[height]';
+  [zoom>=19] {
+    building-fill:lighten( @landuse_basic, 1.5% );
+    building-height:2; // Insufficient data for '[height]';
+  }
+}
+
 /* ================================================================== */
 /* WATER AREAS
 /* ================================================================== */
