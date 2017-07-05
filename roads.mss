@@ -107,7 +107,7 @@ come in as well.
     line-opacity: 0;
   }
   [stylegroup='service'] {
-    line-opacity: 0;
+    line-opacity: 1;
   }
   [bridge=1] { line-color: @standard_case * 0.8; }
   [type='motorway'],
@@ -133,7 +133,7 @@ come in as well.
   [stylegroup='noauto'],[type='platform'] {
     line-color: @pedestrian_case;
   }
-  [tunnel=1] { line-dasharray: 3,3; }        
+  [tunnel=1] { line-dasharray: 3,3; }
   /* -- widths -- */
   [stylegroup='railway'] {
     line-width: 0;
@@ -180,15 +180,14 @@ come in as well.
       [type='secondary_link'] { line-width: @rdz14_min + @rd_ol_wd; }
     }
     /* No minor bridges yet */
-    [stylegroup='noauto']   {
-      line-width: 0;
-    }
+    [stylegroup='service']  { line-width: 0; }
+    [stylegroup='noauto']   { line-width: 0; }
   }
   [zoom=16] {
     [stylegroup='motorway'] { line-width: @rdz15_maj + @rd_ol_wd_2; }
     [stylegroup='mainroad'] { line-width: @rdz15_med + @rd_ol_wd; }
     [stylegroup='minorroad']{ line-width: @rdz15_min + @rd_ol_wd; }
-    [stylegroup='service']  { line-width: @rdz15_min / 3 + @rd_ol_wd; }
+    [stylegroup='service']  { line-width: @rdz15_min / 4; line-opacity: 0.3; }
     [stylegroup='noauto']   { line-width: 0; }
   }
   [zoom=17] {
@@ -275,17 +274,13 @@ come in as well.
       [zoom>18]{ line-width:@rdz18_min; }
     }
   }
-  /*
+
   [stylegroup='noauto'],
   [stylegroup='service'],
   [stylegroup='minorroad'] {
     line-width: 0;
   }
-  */
-  [stylegroup='service'] {
-    line-opacity: 0;
-  }
-  
+
   [stylegroup='service'],
   [stylegroup='minorroad'],
   [stylegroup='mainroad'],
@@ -327,14 +322,14 @@ come in as well.
       [type='tertiary'],
       [type='secondary_link'] { line-width: @rdz14_min; }
     }
-    [stylegroup='service']  { line-width: @rdz14_min / 3; }
+    [stylegroup='service']  { line-width: @rdz14_min / 4; }
     [stylegroup='noauto']   { line-width: 0; }
   }
   [zoom=16] {
     [stylegroup='motorway'] { line-width: @rdz15_maj; }
     [stylegroup='mainroad'] { line-width: @rdz15_med; }
     [stylegroup='minorroad']{ line-width: @rdz15_min; }
-    [stylegroup='service']  { line-width: @rdz15_min / 3; }
+    [stylegroup='service']  { line-width: 0; }
     [stylegroup='noauto']   { line-width: 0; }
   }
   [zoom=17] {
@@ -403,6 +398,7 @@ come in as well.
   marker-fill:@standard_fill;
   marker-line-color:@standard_case;
   marker-line-width:2;
+  marker-line-opacity:0.5;
   marker-allow-overlap:true;
 }
 #turning_circle_fill[zoom>=15] {
@@ -416,7 +412,7 @@ come in as well.
   [zoom=15] { marker-width:@rdz14_min * 1.1; }
   [zoom=16] { marker-width:@rdz15_min * 1.1; }
   [zoom=17] { marker-width:@rdz16_min * 1.1; }
-  [zoom=18] { marker-width:@rdz17_min * 1.1; }
+  [zoom=18] { marker-width:@rdz17_min * 1.6; }
   [zoom>=19] { marker-width:@rdz18_min * 1.1; }
 }
 
