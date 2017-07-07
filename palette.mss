@@ -63,7 +63,7 @@ Map { font-directory: url(./fonts); }
 
 @pedestrian_area:   #fff;
 
-@parking:           #fff; // This should be same as @standard_fill
+@parking:           @landuse_basic; // This should be same as @standard_fill
 
 // Use for the coastline shadow effect
 @coastline-shadow:  @water;

@@ -10,7 +10,7 @@
 /* LANDUSE & LANDCOVER
 /* ================================================================== */
 
-#land[zoom>=0][zoom<7],
+#land[zoom>=0][zoom<11],
 #shoreline_300[zoom>=7][zoom<11],
 #processed_p[zoom>=11] {
   polygon-fill: @land;
@@ -42,6 +42,7 @@
   [type='grass']         { polygon-fill: @grass; }
   [type='meadow']        { polygon-fill: @park; }
   [type='park']          { polygon-fill: @park; }
+  [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian'],[type='steps']
                          { polygon-fill: @pedestrian_fill;
                            line-color:   @pedestrian_case;
