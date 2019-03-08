@@ -41,7 +41,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://free.tilehosting.com/data/v3.json?key=Og58UhhtiiTaLVlPtPgs"
+      "url": "mbtiles://finland.mbtiles"
     }
   },
   "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
