@@ -3016,7 +3016,7 @@
       "layout": {
         "icon-image": "circle_stroked_11",
         "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -4563,7 +4563,7 @@
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
-        "text-field": "{name:latin} {name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -4591,7 +4591,7 @@
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Noto Sans Italic"
         ],
@@ -4665,7 +4665,7 @@
       "layout": {
         "symbol-placement": "point",
         "symbol-spacing": 350,
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -4792,7 +4792,7 @@
       ],
       "layout": {
         "symbol-placement": "line",
-        "text-field": "{name:latin} {name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light"
         ],
@@ -4843,7 +4843,7 @@
       ],
       "layout": {
         "symbol-placement": "line",
-        "text-field": "{name:latin} {name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light"
         ],
@@ -4887,7 +4887,7 @@
       ],
       "layout": {
         "symbol-placement": "line",
-        "text-field": "{name:latin} {name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light"
         ],
@@ -4966,7 +4966,7 @@
       "layout": {
         "icon-image": "",
         "text-anchor": "top",
-        "text-field": "{name:latin}{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -5030,7 +5030,7 @@
       "layout": {
         "icon-image": "",
         "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -5068,7 +5068,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Light Italic"
         ],
@@ -5119,7 +5119,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato Regular"
         ],
@@ -5178,7 +5178,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": [
           "Lato SemiBold"
         ],
