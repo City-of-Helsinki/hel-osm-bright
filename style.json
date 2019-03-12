@@ -41,7 +41,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "mbtiles://finland.mbtiles"
+      "url": "https://tiles.hel.ninja:8080/data/helsinki.json"
     }
   },
   "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
