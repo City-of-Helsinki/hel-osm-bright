@@ -41,11 +41,11 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://tiles.hel.ninja:8080/data/helsinki.json"
+      "url": "https://tiles.hel.ninja/data/helsinki.json"
     }
   },
   "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
-  "glyphs": "https://tiles.hel.ninja:8080/fonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://tiles.hel.ninja/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
