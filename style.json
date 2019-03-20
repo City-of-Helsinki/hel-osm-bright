@@ -3051,107 +3051,6 @@
       }
     },
     {
-      "id": "building",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849364238.8171"
-      },
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "minzoom": 13,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-antialias": true,
-        "fill-color": "rgba(232, 229, 223, 1)",
-        "fill-outline-color": {
-          "stops": [
-            [
-              14,
-              "rgba(153, 153, 153, 0)"
-            ],
-            [
-              15,
-              "rgba(153, 153, 153, 1)"
-            ]
-          ]
-        },
-        "fill-opacity": {
-          "stops": [
-            [
-              13,
-              0
-            ],
-            [
-              15,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "building-top",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849364238.8171"
-      },
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "minzoom": 15,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": {
-          "stops": [
-            [
-              15,
-              "rgba(241, 239, 230, 0)"
-            ],
-            [
-              16,
-              "rgba(241, 239, 230, 1)"
-            ]
-          ]
-        },
-        "fill-opacity": 1,
-        "fill-outline-color": {
-          "stops": [
-            [
-              15,
-              "rgba(153, 153, 153, 0)"
-            ],
-            [
-              16,
-              "rgba(153, 153, 153, 1)"
-            ]
-          ]
-        },
-        "fill-translate": {
-          "base": 1,
-          "stops": [
-            [
-              15,
-              [
-                0,
-                -1.5
-              ]
-            ],
-            [
-              18,
-              [
-                0,
-                -9
-              ]
-            ]
-          ]
-        },
-        "fill-antialias": true
-      }
-    },
-    {
       "id": "bridge-service-track-outer-casing",
       "type": "line",
       "metadata": {
@@ -4914,6 +4813,88 @@
         "text-halo-blur": 0.5,
         "text-halo-width": 1,
         "text-halo-color": "#fff"
+      }
+    },
+    {
+      "id": "building-flat",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849364238.8171"
+      },
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(232, 229, 223, 1)",
+        "fill-outline-color": "rgba(153, 153, 153, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "building-extruded",
+      "type": "fill-extrusion",
+      "metadata": {
+        "mapbox:group": "1444849364238.8171"
+      },
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "minzoom": 15,
+      "filter": [
+        "all"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-extrusion-color": "rgba(232, 229, 223, 1)",
+        "fill-extrusion-height": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          2,
+          17,
+          [
+            "get",
+            "render_height"
+          ]
+        ],
+        "fill-extrusion-opacity": {
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        },
+        "fill-extrusion-base": 0,
+        "fill-extrusion-translate-anchor": "map"
       }
     },
     {
