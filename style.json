@@ -5000,12 +5000,18 @@
           "protected_area",
           "prison",
           "lodging",
-          "art_gallery"
+          "art_gallery",
+          "hospital",
+          "stadium",
+          "pitch",
+          "playground"
         ],
         [
-          "!=",
+          "!in",
           "subclass",
-          "artwork"
+          "artwork",
+          "books",
+          "clinic"
         ]
       ],
       "layout": {
