@@ -648,7 +648,8 @@
               ]
             ]
           ]
-        }
+        },
+        "fill-translate-anchor": "viewport"
       }
     },
     {
@@ -1815,7 +1816,7 @@
               15,
               [
                 0,
-                -1
+                0
               ]
             ],
             [
@@ -1826,7 +1827,8 @@
               ]
             ]
           ]
-        }
+        },
+        "line-translate-anchor": "viewport"
       }
     },
     {
@@ -1885,7 +1887,7 @@
               15,
               [
                 0,
-                -1
+                0
               ]
             ],
             [
@@ -1896,7 +1898,8 @@
               ]
             ]
           ]
-        }
+        },
+        "line-translate-anchor": "viewport"
       }
     },
     {
@@ -1937,7 +1940,8 @@
             ]
           ]
         },
-        "fill-outline-color": "rgba(153, 153, 153, 1)"
+        "fill-outline-color": "rgba(153, 153, 153, 1)",
+        "fill-translate-anchor": "viewport"
       }
     },
     {
@@ -1987,7 +1991,7 @@
               15,
               [
                 0,
-                -1
+                0
               ]
             ],
             [
@@ -1999,7 +2003,8 @@
             ]
           ]
         },
-        "fill-antialias": true
+        "fill-antialias": true,
+        "fill-translate-anchor": "viewport"
       }
     },
     {
