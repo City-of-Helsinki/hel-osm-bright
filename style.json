@@ -4837,7 +4837,18 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(232, 229, 223, 1)",
+        "fill-color": {
+          "stops": [
+            [
+              15,
+              "rgba(232, 229, 223, 1)"
+            ],
+            [
+              16,
+              "rgba(153, 153, 153, 1)"
+            ]
+          ]
+        },
         "fill-outline-color": "rgba(153, 153, 153, 1)",
         "fill-opacity": {
           "stops": [
