@@ -92,44 +92,6 @@
       }
     },
     {
-      "id": "landuse-pitch",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849388993.3071"
-      },
-      "source": "openmaptiles",
-      "source-layer": "landuse",
-      "minzoom": 0,
-      "filter": [
-        "all",
-        [
-          "in",
-          "class",
-          "pitch",
-          "sports_centre",
-          "stadium"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(198, 232, 180, 1)",
-        "fill-opacity": {
-          "stops": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "landuse-park",
       "type": "fill",
       "metadata": {
@@ -187,38 +149,6 @@
       },
       "paint": {
         "fill-color": "rgba(198, 232, 180, 1)",
-        "fill-opacity": {
-          "stops": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "transportation-pedestrian",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849388993.3071"
-      },
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "filter": [
-        "all",
-        [
-          "==",
-          "subclass",
-          "pedestrian"
-        ]
-      ],
-      "paint": {
-        "fill-color": "rgba(244, 231, 221, 1)",
         "fill-opacity": {
           "stops": [
             [
@@ -389,6 +319,50 @@
         "fill-color": "rgba(251, 251, 203, 1)",
         "fill-opacity": {"stops": [[8, 0], [11, 1]]},
         "fill-outline-color": "hsla(0, 0%, 0%, 0.03)"
+      }
+    },
+    {
+      "id": "landuse-open",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849388993.3071"
+      },
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "minzoom": 0,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "pitch",
+          "sports_centre",
+          "stadium",
+          "park",
+          "playground",
+          "recreation_ground",
+          "scrub",
+          "village_green",
+          "track"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(244, 231, 221, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              8,
+              0
+            ],
+            [
+              11,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -2133,35 +2107,102 @@
       }
     },
     {
-      "id": "highway-area",
+      "id": "transportation-area-pedestrian",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1444849345966.4436"
+        "mapbox:group": "1444849388993.3071"
       },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
         "all",
         [
+          "in",
+          "subclass",
+          "pedestrian",
+          "footway",
+          "platform"
+        ],
+        [
           "==",
           "$type",
           "Polygon"
-        ],
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgba(244, 231, 221, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              8,
+              0
+            ],
+            [
+              11,
+              1
+            ]
+          ]
+        }
+      },
+      "minzoom": 0,
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "highway-service-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": [
+        "all",
         [
-          "!in",
+          "in",
           "class",
-          "pier",
-          "pedestrian"
+          "service_construction",
+          "track_construction"
         ]
       ],
       "layout": {
-        "visibility": "none"
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
       },
       "paint": {
-        "fill-antialias": false,
-        "fill-color": "hsla(0, 0%, 89%, 0.56)",
-        "fill-opacity": 0.9,
-        "fill-outline-color": "#cfcdca"
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              14,
+              0.6
+            ],
+            [
+              20,
+              15
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -2220,6 +2261,65 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "highway-minor-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "minor_construction"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              13,
+              1
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -2284,6 +2384,64 @@
       }
     },
     {
+      "id": "highway-tertiary-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "tertiary_construction"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              11.5,
+              0
+            ],
+            [
+              12.5,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              11,
+              0.9
+            ],
+            [
+              15,
+              7
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
+      }
+    },
+    {
       "id": "highway-tertiary-casing",
       "type": "line",
       "metadata": {
@@ -2341,6 +2499,66 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "highway-primary-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "primary_construction",
+          "secondary_construction"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              11.5,
+              0
+            ],
+            [
+              12.5,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              11,
+              0.9
+            ],
+            [
+              15,
+              8
+            ],
+            [
+              20,
+              30
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -2403,6 +2621,78 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "highway-motorway-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "motorway_construction",
+          "trunk_construction"
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(137, 134, 104, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0.4
+            ],
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              1.2
+            ],
+            [
+              15,
+              8.5
+            ],
+            [
+              20,
+              30
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1,
+          1
+        ]
       }
     },
     {
@@ -2480,6 +2770,59 @@
       }
     },
     {
+      "id": "highway-path-casing-construction",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "path_construction"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(238, 238, 238, 1)",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              14,
+              1.6
+            ],
+            [
+              20,
+              6
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        },
+        "line-dasharray": [
+          0.5,
+          1
+        ]
+      }
+    },
+    {
       "id": "highway-path-casing",
       "type": "line",
       "metadata": {
@@ -2548,14 +2891,15 @@
         [
           "!in",
           "brunnel",
-          "tunnel",
-          "bridge"
+          "tunnel"
         ],
         [
           "in",
           "class",
           "service",
-          "track"
+          "track",
+          "service_construction",
+          "track_construction"
         ]
       ],
       "layout": {
@@ -2606,13 +2950,13 @@
         [
           "!in",
           "brunnel",
-          "tunnel",
-          "bridge"
+          "tunnel"
         ],
         [
           "in",
           "class",
-          "minor"
+          "minor",
+          "minor_construction"
         ]
       ],
       "layout": {
@@ -2682,13 +3026,13 @@
         [
           "in",
           "class",
-          "tertiary"
+          "tertiary",
+          "tertiary_construction"
         ],
         [
           "!in",
           "brunnel",
-          "tunnel",
-          "bridge"
+          "tunnel"
         ]
       ],
       "layout": {
@@ -2755,13 +3099,14 @@
           "in",
           "class",
           "primary",
-          "secondary"
+          "secondary",
+          "primary_construction",
+          "secondary_construction"
         ],
         [
           "!in",
           "brunnel",
-          "tunnel",
-          "bridge"
+          "tunnel"
         ]
       ],
       "layout": {
@@ -2827,7 +3172,6 @@
         [
           "!in",
           "brunnel",
-          "bridge",
           "tunnel"
         ],
         [
@@ -2887,13 +3231,14 @@
           "in",
           "class",
           "motorway",
-          "trunk"
+          "trunk",
+          "motorway_construction",
+          "trunk_construction"
         ],
         [
           "!in",
           "brunnel",
-          "tunnel",
-          "bridge"
+          "tunnel"
         ]
       ],
       "layout": {
@@ -3178,6 +3523,49 @@
         "text-halo-width": 1,
         "icon-color": "#bbb",
         "icon-opacity": 0.25
+      }
+    },
+    {
+      "id": "transportation-bridge-area",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849345966.4436"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ],
+        [
+          "!in",
+          "class",
+          "pier",
+          "pedestrian"
+        ],
+        [
+          "!in",
+          "subclass",
+          "pedestrian",
+          "footway",
+          "platform"
+        ],
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-antialias": false,
+        "fill-color": "rgba(252, 247, 245, 1)",
+        "fill-opacity": 1
       }
     },
     {
@@ -4815,9 +5203,10 @@
       "source-layer": "transportation_name",
       "minzoom": 15,
       "filter": [
-        "==",
+        "in",
         "class",
-        "path"
+        "path",
+        "path_construction"
       ],
       "layout": {
         "symbol-placement": "line",
@@ -4867,7 +5256,10 @@
           "class",
           "minor",
           "service",
-          "track"
+          "track",
+          "minor_construction",
+          "service_construction",
+          "track_construction"
         ]
       ],
       "layout": {
@@ -4912,7 +5304,11 @@
         "primary",
         "secondary",
         "tertiary",
-        "trunk"
+        "trunk",
+        "primary_construction",
+        "secondary_construction",
+        "tertiary_construction",
+        "trunk_construction"
       ],
       "layout": {
         "symbol-placement": "line",
