@@ -55,83 +55,6 @@
       }
     },
     {
-      "id": "landuse-garden",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849388993.3071"
-      },
-      "source": "openmaptiles",
-      "source-layer": "landuse",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "in",
-          "class",
-          "garden",
-          "allotments"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(198, 232, 180, 1)",
-        "fill-opacity": {
-          "stops": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "landuse-park",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849388993.3071"
-      },
-      "source": "openmaptiles",
-      "source-layer": "landuse",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "in",
-          "class",
-          "park",
-          "playground",
-          "recreation_ground",
-          "scrub",
-          "village_green"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(198, 232, 180, 1)",
-        "fill-opacity": {
-          "stops": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "landuse-cemetery",
       "type": "fill",
       "metadata": {
@@ -147,6 +70,39 @@
       "layout": {
         "visibility": "visible"
       },
+      "paint": {
+        "fill-color": "rgba(198, 232, 180, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              8,
+              0
+            ],
+            [
+              11,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landcover-grass",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849388993.3071"
+      },
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "grass"
+        ]
+      ],
       "paint": {
         "fill-color": "rgba(198, 232, 180, 1)",
         "fill-opacity": {
@@ -207,13 +163,21 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": [
-        "all",
+        "any",
         [
           "in",
           "class",
           "farm",
           "farmyard",
-          "farmland"
+          "farmland",
+          "meadow"
+        ],
+        [
+          "in",
+          "subclass",
+          "allotments",
+          "meadow",
+          "scrub"
         ]
       ],
       "layout": {
@@ -221,40 +185,6 @@
       },
       "paint": {
         "fill-color": "rgba(224, 242, 182, 1)",
-        "fill-opacity": {
-          "stops": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              1
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "landcover-grass",
-      "type": "fill",
-      "metadata": {
-        "mapbox:group": "1444849388993.3071"
-      },
-      "source": "openmaptiles",
-      "source-layer": "landcover",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "in",
-          "class",
-          "grass",
-          "meadow"
-        ]
-      ],
-      "paint": {
-        "fill-color": "rgba(198, 232, 180, 1)",
         "fill-opacity": {
           "stops": [
             [
