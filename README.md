@@ -1,3 +1,7 @@
+ℹ️ hel-osm-bright has been integrated into [hel-osm-styles](https://github.com/City-of-Helsinki/hel-osm-styles) ℹ️
+
+---
+
 HEL Service Map Bright
 ==========
 
